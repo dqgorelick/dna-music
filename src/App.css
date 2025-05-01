@@ -1,0 +1,265 @@
+html {
+  font-size: 20px !important;
+}
+
+@media all and (max-width: 1300px) {
+  html {
+    font-size: 16px !important;
+  }
+}
+
+body {
+  color: #fff;
+  background-color: #181818;
+  font-family: din-2014, sans-serif;
+}
+
+@font-face {
+  font-family: 'Din';
+  src: local('Din'), url(./assets/fonts/din-reg.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Din Medium';
+  src: local('Din'), url(./assets/fonts/din.ttf) format('ttf');
+}
+
+/* react slider  */
+
+.bounds-slider {
+  width: 100%;
+  height: 2rem;
+  margin: auto;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+
+@media all and (max-width: 1300px) {
+  .bounds-slider { 
+     max-width: 1000px;
+     width: 100%;
+  }
+}
+
+.bounds-thumb {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  border: 5px solid #aaa;
+  background-color: #aaa;
+  display: block;
+}
+
+.bounds-thumb.active {
+  background-color: #aaa;
+}
+
+.bounds-track {
+  position: relative;
+  background: #333;
+}
+
+.bounds-track.bounds-track-1 {
+  background-color: #aaa;
+}
+
+.bounds-slider .bounds-track {
+  top: 20px;
+  height: 4px;
+}
+
+.bounds-slider .bounds-thumb {
+  top: 12px;
+  width: 12px;
+  outline: none;
+  height: 20px;
+  line-height: 38px;
+  border-radius: 4px;
+}
+
+.length-slider {
+  cursor: pointer;
+  width: 100%;
+  height: 1rem;
+  background-color: #393939;
+  border-radius: 0.25rem;
+  /* margin: auto; */
+}
+
+.length-slider:hover {
+  background-color: #666666;
+}
+
+.length-track.length-track-0 {
+  background-color: #000;
+}
+
+.length-thumb {
+  cursor: pointer;
+  width: 10px;
+  height: 1rem;
+  border-radius: 0.25rem;
+  /* top: -0.45rem; */
+  background-color: #aaa;
+}
+
+.tempo-slider {
+  cursor: pointer;
+  width: 100%;
+  height: 1rem;
+  background-color: #393939;
+  border-radius: 0.25rem;
+  margin: auto;
+}
+
+.tempo-slider.expanded {
+  height: 1.5rem;
+}
+
+.tempo-slider:hover {
+  background-color: #666666;
+}
+
+.tempo-track.tempo-track-0 {
+  background-color: #000;
+}
+
+.tempo-thumb {
+  cursor: pointer;
+  width: 0.7rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  /* top: -0.45rem; */
+  background-color: #aaa;
+}
+
+.tempo-thumb.expanded {
+  height: 1rem;
+  width: 1rem;
+  margin-top: 0.25rem;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+/* intro */
+
+.intro-title {
+  border: 1px #444 solid;
+  color: #444;
+  cursor: initial;
+}
+
+.intro-title.active {
+  border: 1px white solid;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* btns */
+
+.btn-default:hover {
+  background-color: 'rgba(255,255,255,0.2)'
+}
+
+.intro-title.active:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.console-button:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.sequence-button {
+    padding: 0.25rem 0.25rem;
+    margin-top: -0.5rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.sequence-button:hover {
+  text-decoration: underline;
+}
+
+/* about page */
+
+.about-page a {
+  text-decoration: underline;
+}
+
+/* blobs */
+
+.blobs path,
+.blobs line {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.animatingEnd {
+  animation: linePulseEnd var(--timeout2) linear forwards;
+}
+
+@keyframes linePulseEnd {
+  0% {
+    stroke: hsla(var(--h), var(--s), var(--l), var(--a));
+    stroke-dashoffset: var(--offset);
+    stroke-width: var(--stroke-width);
+    stroke-dasharray: var(--start) var(--initial) var(--segment_length);
+  }
+
+  40% {
+    stroke: rgba(255, 255, 255, var(--a));
+    stroke-width: var(--stroke-width);
+  }
+  
+  49% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: var(--stroke-width);
+  }
+
+  50% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: var(--stroke-width);
+    stroke-dashoffset: var(--offset);
+    stroke-dasharray: var(--start_midway) var(--initial) 0;
+  }
+
+  100% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-dashoffset: var(--offset);
+    stroke-dasharray: var(--end) var(--initial) var(--segment_length);
+  }
+}
+
+
+.animating {
+  animation: linePulse var(--timeout) cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes linePulse {
+  0% {
+    stroke: hsla(var(--h), var(--s), var(--l), var(--a));
+    stroke-width: var(--stroke-width);
+    stroke-dashoffset: var(--offset);
+    stroke-dasharray: var(--start) var(--initial) var(--segment_length);
+  }
+
+  100% {
+    stroke: hsla(var(--h), var(--s), var(--l), var(--a));
+    stroke-width: var(--stroke-width);
+    stroke-dashoffset: var(--offset);
+    stroke-dasharray: var(--end) var(--initial) var(--segment_length);
+  }
+}

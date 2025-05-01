@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dna-music/static/css/main.26badfbe.css",
+    "main.js": "/dna-music/static/js/main.9ae01c21.js",
+    "static/js/787.c1112931.chunk.js": "/dna-music/static/js/787.c1112931.chunk.js",
+    "static/media/din.ttf": "/dna-music/static/media/din.8567efa4f57bf6a76dab.ttf",
+    "static/media/din-reg.ttf": "/dna-music/static/media/din-reg.a2a891e79c2edfc10f44.ttf",
+    "index.html": "/dna-music/index.html",
+    "main.26badfbe.css.map": "/dna-music/static/css/main.26badfbe.css.map",
+    "main.9ae01c21.js.map": "/dna-music/static/js/main.9ae01c21.js.map",
+    "787.c1112931.chunk.js.map": "/dna-music/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26badfbe.css",
+    "static/js/main.9ae01c21.js"
+  ]
+}
